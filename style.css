@@ -1,0 +1,576 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, a,
+img, i, ol, ul, li,  footer, header, 
+menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+footer, header, menu, nav, section {
+	display: block;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.header-box {
+  background-image: url(images/desktop/image-hero.jpg);
+  background-position: top center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  position: absolute;
+  top: 1.8rem;
+  left: 2rem;
+  z-index: 2;
+}
+
+.banner-title {
+  border: 2px solid #fff;
+  color: hsl(0, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+
+  font-size: 2.5rem;
+  font-weight: 100;
+  padding: 1.5rem;
+
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  align-items: flex-start;
+  background-color: black;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  justify-content: flex-end;
+  transform: translateX(-100%);
+  transition: 0.5s ease-out;
+  z-index: 1;
+}
+
+.menu-box {
+  text-decoration: none;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  padding: 10%;
+  line-height: 3rem;
+}
+
+.menu-box-menu a {
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+  padding: 0.5rem;
+}
+
+.menu-box-menu > a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.btn-menu {
+  background-color: transparent;
+  border: none;
+  padding: 0rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-menu-open i::before {
+  background-image: url(images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  color: #fff;
+  content: " ";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.btn-menu-close i::before {
+  display: block;
+  background-image: url(images/icon-close.svg);
+  background-repeat: no-repeat;
+  color: #fff;
+  content: " ";
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  visibility: hidden;
+}
+
+.menu.open .btn-menu-close i::before {
+  visibility: visible;
+  transition-delay: 0.4s;
+}
+
+.about-box {
+  padding: 6rem 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.about-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  background-color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 3rem 1rem 0;
+}
+
+.about-text h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+  color: hsl(0, 0%, 55%);
+  line-height: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.creations-box {
+  padding: 0 1.5rem 6rem;
+  position: relative;
+}
+
+.creations-main-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.cards-box {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.card-item {
+  opacity: 1;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
+  height: 7.4rem;
+  margin-top: 1.5rem;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+.card-item:hover > .card-img {
+  opacity: 0.4;
+}
+.card-item:hover {
+  color: black;
+}
+
+.card-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  width: 40%;
+  position: absolute;
+  top: 30%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+}
+
+.card-item:nth-child(4) > .card-title {
+  width: 30%;
+}
+
+.first-card {
+  background-image: url(images/mobile/image-deep-earth.jpg);
+}
+
+.second-card {
+  background-image: url(images/mobile/image-night-arcade.jpg);
+}
+
+.third-card {
+  background-image: url(images/mobile/image-soccer-team.jpg);
+}
+
+.fourth-card {
+  background-image: url(images/mobile/image-grid.jpg);
+}
+
+.fifth-card {
+  background-image: url(images/mobile/image-from-above.jpg);
+}
+
+.sixth-card {
+  background-image: url(images/mobile/image-pocket-borealis.jpg);
+}
+
+.seventh-card {
+  background-image: url(images/mobile/image-curiosity.jpg);
+}
+
+.eight-card {
+  background-image: url(images/mobile/image-fisheye.jpg);
+}
+
+.btn-see-all {
+  background: transparent;
+  border: 1px solid hsl(0, 0%, 0%);
+  cursor: pointer;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 10rem;
+  height: 2.4rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-see-all:hover {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+}
+
+
+footer {
+  font-family: "Alata", sans-serif;
+  background-color: hsl(0, 0%, 0%);
+}
+
+.footer-logo {
+  padding-top: 3.3rem;
+  text-align: center;
+}
+
+.footer-menu-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.footer-menu-box-menu  {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.footer-menu-box-menu  a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+}
+
+.footer-menu-box-menu  > a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.footer-social-box-icon  > a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.footer-social-box {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 2rem auto 1.5rem;
+}
+
+.copyright {
+  text-align: center;
+  color: hsl(0, 0%, 55%);
+  margin-bottom: 2rem;
+}
+
+.attribution {
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header-box {
+    padding: 3rem 10%;
+  }
+  .header-logo {
+    position: relative;
+    height: 2rem;
+    top: 0;
+    left: 0;
+  }
+  .banner-title {
+    font-size: 4rem;
+    left: 10%;
+    transform: translate(0%, -50%);
+    max-width: 30rem;
+  }
+  .btn-menu {
+    display: none;
+  }
+
+  .about-box {
+    padding: 6rem 14%;
+    position: relative;
+    margin: 0 auto;
+  }
+  .about-img img {
+    width: 60%;
+  }
+  .about-text {
+    box-sizing: border-box;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 45%;
+    right: 5%;
+    text-align: left;
+    padding: 1rem 4rem 1rem 1rem;
+  }
+  .about-text h2 {
+    font-size: 2rem;
+  }
+  .about-text p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .menu {
+    background-color: transparent;
+    transform: translateX(0);
+  }
+
+  .menu-box {
+    display: flex;
+    position: relative;
+    padding: 0;
+    top: 0;
+    justify-content: end;
+    line-height: 2rem;
+  }
+
+  .menu-box-menu a {
+    padding: 0.5rem;
+    font-family: "Alata", sans-serif;
+    text-transform: capitalize;
+  }
+
+  .creations-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 768px;
+    padding: 0 10% 6rem;
+    margin-top: 2rem;
+  }
+
+  .creations-main-title {
+    align-self: flex-start;
+    margin-left: 4.5%;
+  }
+
+  .cards-box {
+    grid-template-columns: repeat(2, 16.25rem);
+    gap: 2rem;
+  }
+
+  .card-item {
+    height: 28rem;
+    margin: 0;
+  }
+
+  .first-card {
+    background-image: url(images/desktop/image-deep-earth.jpg);
+  }
+
+  .second-card {
+    background-image: url(images/desktop/image-night-arcade.jpg);
+  }
+
+  .third-card {
+    background-image: url(images/desktop/image-soccer-team.jpg);
+  }
+
+  .fourth-card {
+    background-image: url(images/desktop/image-grid.jpg);
+  }
+
+  .fifth-card {
+    background-image: url(images/desktop/image-from-above.jpg);
+  }
+
+  .sixth-card {
+    background-image: url(images/desktop/image-pocket-borealis.jpg);
+  }
+
+  .seventh-card {
+    background-image: url(images/desktop/image-curiosity.jpg);
+  }
+
+  .eight-card {
+    background-image: url(images/desktop/image-fisheye.jpg);
+  }
+
+  .card-title {
+    font-size: 2rem;
+    top: 75%;
+    width: 60%;
+  }
+
+  .btn-see-all {
+    position: absolute;
+    top: -0.1%;
+    left: 75.5%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 13rem;
+  }
+  .footer-start {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-menu-box {
+    flex-direction: row;
+    margin: 0;
+  }
+  .footer-menu-box-menu :nth-child(1) {
+    padding-left: 0;
+  }
+  .footer-end {
+    align-items: flex-end;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+  }
+  .footer-social-box {
+    width: auto;
+  }
+  .footer-social-box-icon {
+    padding: 0 0.5rem;
+  }
+  .copyright {
+    margin-bottom: 0;
+  }
+  .attribution {
+    width: 100%;
+  }
+  .about-box {
+    padding: 6rem 10%;
+  }
+  .about-text {
+    padding: 4rem;
+  }
+  .creations-box {
+    max-width: 1024px;
+  }
+  .creations-main-title {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+  .cards-box {
+    grid-template-columns: repeat(3, 16.25rem);
+    gap: 1rem;
+  }
+  .btn-see-all {
+    top: 0;
+    left: 81.8%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-box {
+    padding: 6rem 11%;
+    max-width: 1112px;
+  }
+  .about-text {
+    padding: 4rem 11% 4rem 4rem;
+    right: 0;
+  }
+  .about-text h2 {
+    font-size: 3rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .creations-box {
+    max-width: 1112px;
+    padding: 0 10% 6rem;
+    margin: 0 auto;
+  }
+  .cards-box {
+    grid-template-columns: repeat(4, 16.25rem);
+    gap: 1.5rem;
+  }
+  .btn-see-all {
+    position: absolute;
+    top: -1%;
+    left: 1174px;
+  }
+}
+
+
+
